@@ -3,13 +3,33 @@ const cors = require("cors");
 const axios = require("axios");
 const path = require("path");
 const qs = require("qs");
+require("dotenv").config();
 
 const app = express();
 const PORT = 3000;
 
 // Instamojo credentials
-const INSTAMOJO_API_KEY = "59cb56bcf6bf603e353f0f308baca3a9";
-const INSTAMOJO_AUTH_TOKEN = "4e72062478086ac50d848508c4f9aaa6";
+const INSTAMOJO_API_KEY = process.env.INSTAMOJO_API_KEY;
+const INSTAMOJO_AUTH_TOKEN = process.env.INSTAMOJO_AUTH_TOKEN;
+
+// Validate environment variables
+if (!INSTAMOJO_API_KEY || !INSTAMOJO_AUTH_TOKEN) {
+  console.error("❌ Missing Instamojo credentials in .env file");
+  console.error("Required: INSTAMOJO_API_KEY, INSTAMOJO_AUTH_TOKEN");
+  process.exit(1);
+}
+
+console.log("✅ Instamojo credentials loaded successfully");
+console.log(
+  "API Key:",
+  INSTAMOJO_API_KEY ? `${INSTAMOJO_API_KEY.substring(0, 8)}...` : "Not found"
+);
+console.log(
+  "Auth Token:",
+  INSTAMOJO_AUTH_TOKEN
+    ? `${INSTAMOJO_AUTH_TOKEN.substring(0, 8)}...`
+    : "Not found"
+);
 
 // Middleware
 app.use(cors());
@@ -18,6 +38,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // Serve static files (your HTML, CSS, JS)
 app.use(express.static(path.join(__dirname)));
+
+// Simple rate limiting for payment requests
+const paymentRequestMap = new Map();
 
 // Create payment request API endpoint
 app.post("/api/create-payment", async (req, res) => {
@@ -31,6 +54,22 @@ app.post("/api/create-payment", async (req, res) => {
       redirect_url,
     } = req.body;
 
+    // Simple rate limiting by email/phone
+    const userKey = `${buyer_email}-${buyer_phone}`;
+    const now = Date.now();
+    const lastRequest = paymentRequestMap.get(userKey);
+
+    if (lastRequest && now - lastRequest < 10000) {
+      // 10 seconds cooldown
+      return res.status(429).json({
+        success: false,
+        error: "Please wait before making another payment request",
+        cooldown: Math.ceil((10000 - (now - lastRequest)) / 1000),
+      });
+    }
+
+    paymentRequestMap.set(userKey, now);
+
     console.log("Creating payment request:", {
       amount,
       purpose,
@@ -38,6 +77,21 @@ app.post("/api/create-payment", async (req, res) => {
       buyer_email,
       buyer_phone,
     });
+
+    // Check for minimum amount (Instamojo minimum is ₹9)
+    if (amount < 9) {
+      return res.status(400).json({
+        success: false,
+        error: "Minimum payment amount is ₹9",
+        details: `Received amount: ₹${amount}`,
+      });
+    }
+
+    // For solo payments (₹200), add a small delay to avoid rate limiting
+    if (amount === 200) {
+      console.log("Solo payment detected, adding small delay...");
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+    }
 
     // Prepare data for Instamojo
     const paymentData = {
@@ -52,18 +106,60 @@ app.post("/api/create-payment", async (req, res) => {
       allow_repeated_payments: false,
     };
 
-    const response = await axios.post(
-      "https://www.instamojo.com/api/1.1/payment-requests/",
-      qs.stringify(paymentData),
-      {
-        headers: {
-          "X-Api-Key": INSTAMOJO_API_KEY,
-          "X-Auth-Token": INSTAMOJO_AUTH_TOKEN,
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        timeout: 15000,
+    console.log("Sending to Instamojo API:", {
+      url: "https://www.instamojo.com/api/1.1/payment-requests/",
+      data: paymentData,
+      headers: {
+        "X-Api-Key": INSTAMOJO_API_KEY ? "***present***" : "***missing***",
+        "X-Auth-Token": INSTAMOJO_AUTH_TOKEN
+          ? "***present***"
+          : "***missing***",
+      },
+    });
+
+    // Retry mechanism for ECONNRESET errors
+    let retryCount = 0;
+    const maxRetries = 3;
+    let response;
+
+    while (retryCount < maxRetries) {
+      try {
+        response = await axios.post(
+          "https://www.instamojo.com/api/1.1/payment-requests/",
+          qs.stringify(paymentData),
+          {
+            headers: {
+              "X-Api-Key": INSTAMOJO_API_KEY,
+              "X-Auth-Token": INSTAMOJO_AUTH_TOKEN,
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            timeout: 20000, // Increased timeout
+            // Add keep-alive settings
+            httpsAgent: new (require("https").Agent)({
+              keepAlive: true,
+              timeout: 60000,
+            }),
+          }
+        );
+        break; // Success, exit retry loop
+      } catch (error) {
+        retryCount++;
+        console.log(
+          `Attempt ${retryCount} failed:`,
+          error.code || error.message
+        );
+
+        if (error.code === "ECONNRESET" && retryCount < maxRetries) {
+          console.log(`Retrying in ${retryCount * 1000}ms...`);
+          await new Promise((resolve) =>
+            setTimeout(resolve, retryCount * 1000)
+          );
+          continue;
+        } else {
+          throw error; // Re-throw if max retries exceeded or different error
+        }
       }
-    );
+    }
 
     if (response.data.success) {
       const paymentUrl = response.data.payment_request.longurl;
