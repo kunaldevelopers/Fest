@@ -409,6 +409,6 @@ Heritage Fest is an **official ISKCON project** organized by the **Hare Krishna 
 
 **Made with ❤️ for preserving and celebrating Indian heritage**
 
-⭐ Star this repository if you found it helpful!
+⭐ Star this repository if you found it helpful!!
 
 </div>
