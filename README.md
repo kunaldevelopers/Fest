@@ -18,26 +18,29 @@ _Celebrating culture and devotion through Dance, Music, Art, Literature and Thea
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [API Documentation](#api-documentation)
-- [Project Structure](#project-structure)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact & Support](#contact--support)
+- [Overview](#-overview)
+- [Official ISKCON Project](#%EF%B8%8F-official-iskcon-project)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Installation](#-installation)
+- [Configuration](#%EF%B8%8F-configuration)
+- [Usage](#-usage)
+- [Payment Gateway Information](#-payment-gateway-information)
+- [API Documentation](#-api-documentation)
+- [Project Structure](#-project-structure)
+- [Screenshots](#%EF%B8%8F-screenshots)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact & Support](#-contact--support)
 
 ---
 
 ## 🌟 Overview
 
-Heritage Fest 2025 is a comprehensive web application designed for the **ISKCON (International Society for Krishna Consciousness)** Hare Krishna Movement in Bhilai to organize and manage cultural competitions. This is an **official ISKCON project** that provides seamless event registration, secure payment processing through Instamojo, and an intuitive user experience for participants.
+Heritage Fest 2025 is a comprehensive web application designed for the **ISKCON (International Society for Krishna Consciousness)** Hare Krishna Movement in Bhilai to organize and manage cultural competitions. This is an **official ISKCON project** that provides seamless event registration, **secure payment processing through Instamojo payment gateway**, and an intuitive user experience for participants.
 
 **🌐 Live Application**: [https://hkmraipur.org/heritage-fest](https://hkmraipur.org/heritage-fest)
+**💳 Payment Gateway**: Instamojo Integration (Seamless Checkout)
 
 ### 🎯 Mission
 
@@ -78,10 +81,14 @@ This Heritage Fest platform is an **official project commissioned by ISKCON** (I
 
 ### 💳 Payment Integration
 
-- **Secure Payments**: Instamojo Seamless Checkout integration
+- **Payment Gateway**: **Instamojo Seamless Checkout** (specifically integrated for this project)
+- **Secure Payments**: End-to-end encrypted payment processing
 - **Multiple Payment Methods**: UPI, Cards, Net Banking, Wallets
 - **Instant Confirmations**: Real-time payment success/failure handling
 - **Fallback Support**: Alternative payment links for network issues
+- **Indian Market Focus**: Optimized for Indian payment preferences
+
+> **Note**: This implementation uses **Instamojo** payment gateway. For Razorpay integration, check out the alternative version in my other repositories.
 
 ### 🔒 Security & Reliability
 
@@ -116,6 +123,8 @@ This Heritage Fest platform is an **official project commissioned by ISKCON** (I
 
 ![Instamojo](https://img.shields.io/badge/Instamojo-FF6B35?style=flat-square&logo=payments&logoColor=white)
 
+> **Instamojo Integration**: This project specifically implements Instamojo payment gateway for ISKCON's requirements. Alternative implementations with Razorpay are available in separate repositories.
+
 ### Tools & Libraries
 
 - **Axios**: HTTP client for API requests
@@ -123,6 +132,7 @@ This Heritage Fest platform is an **official project commissioned by ISKCON** (I
 - **dotenv**: Environment variable management
 - **qs**: Query string parsing
 - **Nodemon**: Development server auto-restart
+- **Instamojo SDK**: Payment gateway integration (Seamless Checkout)
 
 ---
 
@@ -132,7 +142,8 @@ This Heritage Fest platform is an **official project commissioned by ISKCON** (I
 
 - Node.js (v14 or higher)
 - npm or yarn package manager
-- Instamojo account with API credentials
+- **Instamojo account with API credentials** (not Razorpay)
+- Active Instamojo merchant account for payment processing
 
 ### Quick Start
 
@@ -158,8 +169,9 @@ This Heritage Fest platform is an **official project commissioned by ISKCON** (I
    Edit `.env` file with your Instamojo credentials:
 
    ```env
-   INSTAMOJO_API_KEY=your_api_key_here
-   INSTAMOJO_AUTH_TOKEN=your_auth_token_here
+   # Instamojo Payment Gateway Credentials (NOT Razorpay)
+   INSTAMOJO_API_KEY=your_instamojo_api_key_here
+   INSTAMOJO_AUTH_TOKEN=your_instamojo_auth_token_here
    ```
 
 4. **Start the application**
@@ -188,11 +200,15 @@ This Heritage Fest platform is an **official project commissioned by ISKCON** (I
 
 ### Payment Configuration
 
+- **Payment Gateway**: **Instamojo** (Indian payment gateway)
 - **Solo Registration**: ₹200
 - **Group Registration**: ₹300
 - **Minimum Amount**: ₹9 (Instamojo requirement)
 - **Timeout**: 20 seconds per request
 - **Retry Attempts**: 3 (for connection errors)
+- **Currency**: INR (Indian Rupees only)
+
+> **Important**: This project uses **Instamojo** payment integration. For **Razorpay** implementation, please check my other repositories.
 
 ---
 
@@ -204,14 +220,37 @@ This Heritage Fest platform is an **official project commissioned by ISKCON** (I
 2. **Select Category**: Choose from Dance, Music, Art, Literature, or Theatre
 3. **Choose Type**: Select Solo or Group participation
 4. **Fill Details**: Complete the registration form
-5. **Make Payment**: Secure payment through Instamojo
+5. **Make Payment**: Secure payment through **Instamojo** payment gateway
 6. **Confirmation**: Receive confirmation via email
 
 ### For Administrators
 
 - Monitor registrations through server logs
-- Access payment details through Instamojo dashboard
+- Access payment details through **Instamojo dashboard** (not Razorpay)
 - Manage participant data stored in localStorage
+
+---
+
+## 💳 Payment Gateway Information
+
+### Why Instamojo?
+
+This project specifically implements **Instamojo** payment gateway for the following reasons:
+
+- **ISKCON Requirements**: Chosen based on organizational preferences
+- **Indian Market**: Optimized for Indian payment methods
+- **Lower Fees**: Competitive transaction charges
+- **Seamless Integration**: Better suited for cultural event registrations
+
+### 🔄 Alternative Payment Integrations
+
+Looking for other payment gateway implementations? Check out my other repositories:
+
+- **Razorpay Integration**: Available in separate repository
+- **PayU Integration**: Coming soon
+- **Paytm Integration**: Available on request
+
+> **Note**: This Heritage Fest implementation is specifically built with **Instamojo**. The codebase can be adapted for other payment gateways with minimal changes to the API endpoints.
 
 ---
 
@@ -353,7 +392,8 @@ Heritage Fest is an **official ISKCON project** organized by the **Hare Krishna 
 #### 👩‍💼 Project Leadership
 
 - **Team Director**: [Neha Mahto](https://www.linkedin.com/in/neha-mahto-454172245/)
-- **Developer**: [Kunal Kumar Pandit](https://www.linkedin.com/in/kunalkumarpandit/)
+- **Lead Developer**: [Kunal Kumar Pandit](https://www.linkedin.com/in/kunalkumarpandit/)
+- **Contributing Developer**: [Vikky Coder](https://github.com/vikky-coder-hub/)
 - **Organization**: ISKCON (International Society for Krishna Consciousness)
 
 ### 💬 Get Help
