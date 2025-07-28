@@ -1,0 +1,2906 @@
+<!DOCTYPE html>
+<html class="html" lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heritage Fest 2025 - Hare Krishna Movement, Bhilai</title>
+    <meta
+      name="description"
+      content="Join Heritage Fest 2025 organized by Hare Krishna Movement, Bhilai. Celebrate culture and devotion through Dance, Music, Art, Literature and Theatre competitions."
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Swiper.js for Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@9/swiper-bundle.min.css"
+    />
+
+    <style>
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #b6854d;
+        --accent-color: #874c28;
+        --background-color: #fff8ec;
+        --cta-color: #d97706;
+        --text-dark: #2e2e2e;
+        --text-medium: #6b4f3b;
+        --krishna-purple: #8e44ad;
+        --white: #ffffff;
+        --light-gray: #f5f5f5;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: var(--background-color);
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Cinzel", serif;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      #site-header {
+        background: rgba(255, 248, 236, 0.95);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        border-bottom: 2px solid var(--primary-color);
+        transition: all 0.3s ease;
+      }
+
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .logo h1 {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin: 0;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-menu a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .nav-menu a:hover {
+        color: var(--primary-color);
+      }
+
+      .nav-menu a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary-color);
+        transition: width 0.3s ease;
+      }
+
+      .nav-menu a:hover::after {
+        width: 100%;
+      }
+
+      .mobile-menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .mobile-menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: var(--primary-color);
+        margin: 3px 0;
+        transition: 0.3s;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        margin-top: 80px;
+      }
+
+      .hero-slider {
+        width: 100%;
+        height: 100%;
+      }
+
+      .hero-slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          rgba(0, 0, 0, 0.6),
+          rgba(182, 133, 77, 0.3)
+        );
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: var(--white);
+        max-width: 800px;
+        padding: 2rem;
+      }
+
+      .hero-title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        animation: fadeInUp 1s ease;
+      }
+
+      .hero-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease 0.2s both;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: var(--cta-color);
+        color: var(--white);
+        padding: 1rem 2.5rem;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        animation: fadeInUp 1s ease 0.4s both;
+        box-shadow: 0 8px 25px rgba(217, 119, 6, 0.3);
+      }
+
+      .cta-button:hover {
+        background: var(--primary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 35px rgba(182, 133, 77, 0.4);
+      }
+
+      /* Section Styling */
+      .section {
+        padding: 5rem 0;
+        position: relative;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--cta-color);
+      }
+
+      /* About Section */
+      .about-section {
+        background: var(--white);
+        position: relative;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .about-text h3 {
+        color: var(--accent-color);
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .about-text p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        color: var(--text-medium);
+      }
+
+      .about-image {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .about-image:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Events Section */
+      .events-section {
+        background: linear-gradient(
+          135deg,
+          var(--background-color),
+          var(--light-gray)
+        );
+      }
+
+      .events-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+      }
+
+      .category-banner {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        margin-bottom: 3rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .category-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(182, 133, 77, 0.2)
+        );
+      }
+
+      .category-banner-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem;
+        color: var(--white);
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+      }
+
+      .category-banner h3 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      .category-banner p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      }
+      .tab-button {
+        background: var(--white);
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        /* Touch-friendly enhancements */
+        min-height: 44px;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        touch-action: manipulation;
+      }
+
+      .tab-button.active,
+      .tab-button:hover {
+        background: var(--primary-color);
+        color: var(--white);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(182, 133, 77, 0.3);
+      }
+
+      .tab-button:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba(182, 133, 77, 0.2);
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .event-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+
+      .event-card {
+        background: var(--white);
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border-top: 4px solid var(--primary-color);
+        /* Mobile-friendly enhancements */
+        position: relative;
+        overflow: hidden;
+      }
+
+      .event-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(182, 133, 77, 0.05),
+          transparent
+        );
+        transition: left 0.6s ease;
+      }
+
+      .event-card:hover::before {
+        left: 100%;
+      }
+
+      .event-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .event-card h4 {
+        color: var(--accent-color);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+
+      .event-card p {
+        color: var(--text-medium);
+        line-height: 1.6;
+      }
+
+      .event-card .rules-btn,
+      .event-card .register-btn {
+        background: var(--cta-color);
+        color: var(--white);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        /* Touch-friendly enhancements */
+        min-height: 40px;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        font-weight: 500;
+        display: inline-block;
+        white-space: nowrap;
+        margin: 0;
+        vertical-align: top;
+      }
+
+      .event-card .register-btn {
+        background: var(--primary-color);
+        margin-left: 0.5rem;
+      }
+
+      .event-card-buttons-container {
+        margin-top: 1rem;
+        display: block;
+      }
+
+      .event-card .rules-btn:hover {
+        background: var(--primary-color);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+      }
+
+      .event-card .rules-btn:active {
+        transform: translateY(0);
+      }
+
+      .event-card .register-btn:hover {
+        background: var(--accent-color);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(135, 76, 40, 0.3);
+      }
+
+      .event-card .register-btn:active {
+        transform: translateY(0);
+      }
+
+      .event-card-buttons {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        flex-wrap: nowrap;
+      }
+
+      .event-card-buttons button {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .registration-options {
+        display: none;
+        margin-top: 1rem;
+        padding: 1rem;
+        background: var(--light-gray);
+        border-radius: 10px;
+        border: 2px solid var(--primary-color);
+      }
+
+      .registration-options.active {
+        display: block;
+      }
+
+      .registration-options h5 {
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .option-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .option-btn {
+        background: var(--white);
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        text-align: center;
+        flex: 1;
+      }
+
+      .option-btn:hover {
+        background: var(--primary-color);
+        color: var(--white);
+      }
+
+      .price-info {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--cta-color);
+        margin-top: 0.3rem;
+      }
+
+      /* Guidelines Section */
+      .guidelines-section {
+        background: var(--white);
+      }
+
+      .guidelines-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .guideline-card {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        color: var(--white);
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .guideline-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .guideline-card:hover::before {
+        left: 100%;
+      }
+
+      .guideline-card i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .guideline-card h4 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Prasadam Info Card */
+      .prasadam-card {
+        background: linear-gradient(
+          135deg,
+          var(--krishna-purple),
+          var(--cta-color)
+        );
+        color: var(--white);
+        padding: 2rem;
+        border-radius: 20px;
+        text-align: center;
+        margin: 3rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .prasadam-card::before {
+        content: "🍽️";
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 3rem;
+        opacity: 0.3;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        background: linear-gradient(
+          135deg,
+          var(--accent-color),
+          var(--primary-color)
+        );
+        color: var(--white);
+      }
+
+      .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+      }
+
+      .contact-info h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--background-color);
+      }
+
+      .contact-info p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+      }
+
+      .contact-info i {
+        color: var(--cta-color);
+        margin-right: 0.5rem;
+      }
+
+      .map-container {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+      }
+
+      /* Footer */
+      .site-footer {
+        background: var(--text-dark);
+        color: var(--white);
+        padding: 3rem 0 1rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h4 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .social-links a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: var(--white);
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        background: var(--cta-color);
+        transform: translateY(-2px);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        animation: fadeIn 0.3s ease;
+      }
+
+      .modal-content {
+        background-color: var(--white);
+        margin: 5% auto;
+        padding: 2rem;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 600px;
+        position: relative;
+        animation: slideIn 0.3s ease;
+      }
+
+      .close {
+        color: var(--text-medium);
+        float: right;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      .close:hover {
+        color: var(--primary-color);
+      }
+
+      /* Back to Top Button */
+      #scroll-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background: var(--primary-color);
+        color: var(--white);
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      #scroll-top:hover {
+        background: var(--cta-color);
+        transform: translateY(-2px);
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) and (min-width: 769px) {
+        /* Tablet optimization */
+        .events-tabs {
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          margin-bottom: 2.5rem;
+          flex-wrap: wrap;
+        }
+
+        .tab-button {
+          padding: 0.7rem 1.3rem;
+          font-size: 0.95rem;
+        }
+
+        .category-banner {
+          height: 400px;
+        }
+
+        .category-banner h3 {
+          font-size: 2.2rem;
+        }
+
+        .category-banner p {
+          font-size: 1.1rem;
+        }
+
+        .event-cards {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.3rem;
+        }
+
+        .event-card {
+          padding: 1.8rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: var(--background-color);
+          flex-direction: column;
+          padding: 1rem;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .mobile-menu-toggle {
+          display: flex;
+        }
+
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.1rem;
+        }
+
+        .about-content,
+        .contact-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        /* Mobile Events Section Optimization */
+        .events-tabs {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.6rem;
+          margin-bottom: 2rem;
+          padding: 0 0.5rem;
+        }
+
+        .tab-button {
+          padding: 0.6rem 0.8rem;
+          font-size: 0.85rem;
+          text-align: center;
+          min-height: 42px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 20px;
+        }
+
+        .category-banner {
+          height: 300px;
+          margin-bottom: 2rem;
+          border-radius: 10px;
+        }
+
+        .category-banner h3 {
+          font-size: 1.8rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .category-banner p {
+          font-size: 1rem;
+          line-height: 1.4;
+        }
+
+        .category-banner-content {
+          padding: 1.5rem;
+        }
+
+        .event-cards {
+          grid-template-columns: 1fr;
+          gap: 1.2rem;
+        }
+
+        .event-card {
+          padding: 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .event-card h4 {
+          font-size: 1.2rem;
+          margin-bottom: 0.8rem;
+        }
+
+        .event-card p {
+          font-size: 0.95rem;
+          margin-bottom: 1rem;
+        }
+
+        .event-card .rules-btn,
+        .event-card .register-btn {
+          padding: 0.5rem 0.8rem;
+          font-size: 0.8rem;
+          margin: 0;
+          border-radius: 12px;
+          flex: 1;
+          text-align: center;
+          min-width: 0;
+        }
+
+        .event-card .register-btn {
+          margin-left: 0;
+        }
+
+        .event-card-buttons-container {
+          margin-top: 0.8rem;
+          display: flex;
+          gap: 0.5rem;
+          width: 100%;
+        }
+
+        .section {
+          padding: 3rem 0;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 15px;
+        }
+
+        .hero-title {
+          font-size: 2rem;
+        }
+
+        /* Enhanced Mobile Events Section */
+        .events-tabs {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.5rem;
+          margin-bottom: 1.5rem;
+          padding: 0 0.5rem;
+        }
+
+        .tab-button {
+          padding: 0.7rem 0.8rem;
+          font-size: 0.9rem;
+          width: 100%;
+          border-radius: 18px;
+          min-height: 40px;
+        }
+
+        .category-banner {
+          height: 250px;
+          margin-bottom: 1.5rem;
+          border-radius: 8px;
+        }
+
+        .category-banner h3 {
+          font-size: 1.5rem;
+          margin-bottom: 0.2rem;
+        }
+
+        .category-banner p {
+          font-size: 0.9rem;
+          line-height: 1.3;
+        }
+
+        .category-banner-content {
+          padding: 1rem;
+        }
+
+        .event-cards {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .event-card {
+          padding: 1.2rem;
+          border-radius: 10px;
+        }
+
+        .event-card h4 {
+          font-size: 1.1rem;
+          margin-bottom: 0.7rem;
+          line-height: 1.3;
+        }
+
+        .event-card h4 i {
+          margin-right: 0.5rem;
+          font-size: 0.9rem;
+        }
+
+        .event-card p {
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+          line-height: 1.5;
+        }
+
+        .event-card .rules-btn,
+        .event-card .register-btn {
+          padding: 0.6rem 0.8rem;
+          font-size: 0.8rem;
+          margin: 0;
+          border-radius: 12px;
+          flex: 1;
+          text-align: center;
+          min-width: 0;
+        }
+
+        .event-card .register-btn {
+          margin-left: 0;
+        }
+
+        .event-card-buttons-container {
+          margin-top: 0.5rem;
+          display: flex;
+          gap: 0.5rem;
+          width: 100%;
+        }
+
+        .registration-options {
+          margin-top: 0.8rem;
+          padding: 0.8rem;
+          border-radius: 8px;
+        }
+
+        .option-buttons {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .option-btn {
+          padding: 0.7rem 1rem;
+          font-size: 0.9rem;
+          border-radius: 20px;
+        }
+
+        .section {
+          padding: 2.5rem 0;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+          margin-bottom: 2rem;
+        }
+
+        .modal-content {
+          margin: 10% auto;
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="logo">
+            <img
+              src="https://hkmraipur.org/wp-content/uploads/2025/07/HKM-LogoBhilai-Raipur-01-1536x921.png.webp"
+              alt="Heritage Fest 2025"
+              style="height: 60px; width: auto; border-radius: 7px"
+            />
+          </div>
+          <nav class="main-nav">
+            <ul class="nav-menu" id="nav-menu">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#events">Events</a></li>
+              <li><a href="#guidelines">Guidelines</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a
+                  href="#register"
+                  class="cta-button"
+                  style="padding: 0.5rem 1rem; font-size: 0.9rem"
+                  >Register</a
+                >
+              </li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide hero-slide"
+            style="
+              background-image: url('https://hkmraipur.org/wp-content/uploads/2025/07/heritage_fest_02.jpg');
+            "
+          >
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <h1 class="hero-title">Heritage Fest 2025</h1>
+              <p class="hero-subtitle">
+                Celebrate Culture & Devotion with Hare Krishna Movement, Bhilai
+              </p>
+              <a href="#register" class="cta-button">Register Now</a>
+            </div>
+          </div>
+          <div
+            class="swiper-slide hero-slide"
+            style="
+              background-image: url('https://hkmraipur.org/wp-content/uploads/2025/07/heritage_fest_05.jpg');
+            "
+          >
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <h1 class="hero-title">Experience Divine Arts</h1>
+              <p class="hero-subtitle">
+                Dance, Music, Literature, Theatre & More Cultural Competitions
+              </p>
+              <a href="#events" class="cta-button">Explore Events</a>
+            </div>
+          </div>
+          <div
+            class="swiper-slide hero-slide"
+            style="
+              background-image: url('https://hkmraipur.org/wp-content/uploads/2025/07/heritage_fest_06.jpg');
+            "
+          >
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <h1 class="hero-title">Join the Celebration</h1>
+              <p class="hero-subtitle">
+                Be Part of This Grand Cultural Festival
+              </p>
+              <a href="#about" class="cta-button">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">About Heritage Fest</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Celebrating Our Rich Cultural Heritage</h3>
+            <p>
+              Heritage Fest 2025 is a grand cultural celebration organized by
+              the Hare Krishna Movement, Bhilai. This festival aims to preserve
+              and promote our rich Indian cultural heritage through various art
+              forms and competitions.
+            </p>
+            <p>
+              Join us in this magnificent journey of cultural exploration where
+              participants showcase their talents in Dance, Music, Literature,
+              Theatre, Drawing, and Decoration. Experience the divine essence of
+              our traditions while competing for exciting prizes.
+            </p>
+            <p>
+              Our mission is to create a platform where young minds can connect
+              with their roots and express their creativity through traditional
+              and contemporary art forms.
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="https://hkmraipur.org/wp-content/uploads/2025/07/heritage_fest_10.jpg"
+              alt="Heritage Fest Cultural Performance"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section events-section">
+      <div class="container">
+        <h2 class="section-title">Event Categories</h2>
+        <div class="events-tabs">
+          <button class="tab-button active" onclick="showTab('dance')">
+            Dance
+          </button>
+          <button class="tab-button" onclick="showTab('music')">Music</button>
+          <button class="tab-button" onclick="showTab('literature')">
+            Literature Arts
+          </button>
+          <button class="tab-button" onclick="showTab('theatre')">
+            Theatre
+          </button>
+          <button class="tab-button" onclick="showTab('drawing')">
+            Drawing
+          </button>
+          <button class="tab-button" onclick="showTab('decoration')">
+            Decoration
+          </button>
+        </div>
+
+        <!-- Dance Tab -->
+        <div id="dance" class="tab-content active">
+          <div
+            class="category-banner"
+            style="
+              background-image: url('https://hkmraipur.org/wp-content/uploads/2025/07/dance.jpg');
+            "
+          >
+            <div class="category-banner-content">
+              <h3>Dance Categories</h3>
+              <p>
+                Express your devotion through the divine art of dance - from
+                classical Bharatnatyam to contemporary light dance
+              </p>
+            </div>
+          </div>
+          <div class="event-cards">
+            <div class="event-card">
+              <h4>
+                <i class="fas fa-user-friends"></i> Classical Dance -
+                Bharatnatyam
+              </h4>
+              <p>
+                Showcase the divine art of Bharatnatyam with traditional poses,
+                expressions, and storytelling through dance.
+              </p>
+              <button
+                class="rules-btn"
+                onclick="openModal('bharatnatyam-rules')"
+              >
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('bharatnatyam')"
+              >
+                Register
+              </button>
+              <div id="bharatnatyam-registration" class="registration-options">
+                <h5>Choose Registration Type</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('bharatnatyam', 'solo')"
+                  >
+                    Solo
+                    <div class="price-info">₹200</div>
+                  </div>
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('bharatnatyam', 'group')"
+                  >
+                    Group
+                    <div class="price-info">₹300</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-card">
+              <h4><i class="fas fa-star"></i> Classical Dance - Others</h4>
+              <p>
+                Perform other classical dance forms like Kathak, Odissi,
+                Kuchipudi, and more.
+              </p>
+              <button class="rules-btn" onclick="openModal('classical-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('classical')"
+              >
+                Register
+              </button>
+              <div id="classical-registration" class="registration-options">
+                <h5>Choose Registration Type</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('classical', 'solo')"
+                  >
+                    Solo
+                    <div class="price-info">₹200</div>
+                  </div>
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('classical', 'group')"
+                  >
+                    Group
+                    <div class="price-info">₹300</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-card">
+              <h4><i class="fas fa-music"></i> Semi Classical Dance</h4>
+              <p>
+                Blend traditional and contemporary elements in a beautiful
+                semi-classical performance.
+              </p>
+              <button
+                class="rules-btn"
+                onclick="openModal('semi-classical-rules')"
+              >
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('semi-classical')"
+              >
+                Register
+              </button>
+              <div
+                id="semi-classical-registration"
+                class="registration-options"
+              >
+                <h5>Choose Registration Type</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('semi-classical', 'solo')"
+                  >
+                    Solo
+                    <div class="price-info">₹200</div>
+                  </div>
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('semi-classical', 'group')"
+                  >
+                    Group
+                    <div class="price-info">₹300</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-card">
+              <h4><i class="fas fa-bolt"></i> Light Dance</h4>
+              <p>
+                Express yourself through modern and contemporary dance forms
+                with upbeat music.
+              </p>
+              <button
+                class="rules-btn"
+                onclick="openModal('light-dance-rules')"
+              >
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('light-dance')"
+              >
+                Register
+              </button>
+              <div id="light-dance-registration" class="registration-options">
+                <h5>Choose Registration Type</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('light-dance', 'solo')"
+                  >
+                    Solo
+                    <div class="price-info">₹200</div>
+                  </div>
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('light-dance', 'group')"
+                  >
+                    Group
+                    <div class="price-info">₹300</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Music Tab -->
+        <div id="music" class="tab-content">
+          <div
+            class="category-banner"
+            style="
+              background-image: url('https://hkmraipur.org/wp-content/uploads/2025/07/music.jpg');
+            "
+          >
+            <div class="category-banner-content">
+              <h3>Music Categories</h3>
+              <p>
+                Create divine melodies through vocal, instrumental, and
+                spiritual music performances
+              </p>
+            </div>
+          </div>
+          <div class="event-cards">
+            <div class="event-card">
+              <h4><i class="fas fa-om"></i> Gita Sloka Chanting</h4>
+              <p>
+                Recite and chant beautiful verses from the Bhagavad Gita with
+                proper pronunciation and rhythm.
+              </p>
+              <button class="rules-btn" onclick="openModal('gita-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('gita')"
+              >
+                Register
+              </button>
+              <div id="gita-registration" class="registration-options">
+                <h5>Choose Registration Type</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('gita', 'solo')"
+                  >
+                    Solo
+                    <div class="price-info">₹200</div>
+                  </div>
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('gita', 'group')"
+                  >
+                    Group
+                    <div class="price-info">₹300</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-card">
+              <h4>
+                <i class="fas fa-piano"></i> Instrumental Music - Keyboard
+              </h4>
+              <p>
+                Perform classical and light music on keyboard instruments
+                showcasing your musical skills.
+              </p>
+              <button class="rules-btn" onclick="openModal('keyboard-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('keyboard')"
+              >
+                Register
+              </button>
+              <div id="keyboard-registration" class="registration-options">
+                <h5>Registration</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('keyboard', 'solo')"
+                    style="width: 100%"
+                  >
+                    Solo Registration
+                    <div class="price-info">₹200</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-card">
+              <h4>
+                <i class="fas fa-drum"></i> Instrumental Music - Percussion
+              </h4>
+              <p>
+                Create rhythmic magic with tabla, mridangam, drums and other
+                percussion instruments.
+              </p>
+              <button class="rules-btn" onclick="openModal('percussion-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('percussion')"
+              >
+                Register
+              </button>
+              <div id="percussion-registration" class="registration-options">
+                <h5>Registration</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('percussion', 'solo')"
+                    style="width: 100%"
+                  >
+                    Solo Registration
+                    <div class="price-info">₹200</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-card">
+              <h4><i class="fas fa-microphone"></i> Vocal Music</h4>
+              <p>
+                Sing devotional songs, classical ragas, or contemporary
+                spiritual music.
+              </p>
+              <button class="rules-btn" onclick="openModal('vocal-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('vocal')"
+              >
+                Register
+              </button>
+              <div id="vocal-registration" class="registration-options">
+                <h5>Choose Registration Type</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('vocal', 'solo')"
+                  >
+                    Solo
+                    <div class="price-info">₹200</div>
+                  </div>
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('vocal', 'group')"
+                  >
+                    Group
+                    <div class="price-info">₹300</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Literature Arts Tab -->
+        <div id="literature" class="tab-content">
+          <div
+            class="category-banner"
+            style="
+              background-image: url('https://hkmraipur.org/wp-content/uploads/2025/07/heritage_fest_17-1.jpg');
+            "
+          >
+            <div class="category-banner-content">
+              <h3>Literature Arts</h3>
+              <p>
+                Share wisdom through storytelling, poetry, and the beautiful art
+                of spoken word
+              </p>
+            </div>
+          </div>
+          <div class="event-cards">
+            <div class="event-card">
+              <h4><i class="fas fa-child"></i> Rhymes</h4>
+              <p>
+                Recite beautiful devotional rhymes and poems with expression and
+                clarity.
+              </p>
+              <button class="rules-btn" onclick="openModal('rhymes-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('rhymes')"
+              >
+                Register
+              </button>
+              <div id="rhymes-registration" class="registration-options">
+                <h5>Registration</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('rhymes', 'solo')"
+                    style="width: 100%"
+                  >
+                    Solo Registration
+                    <div class="price-info">₹200</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-card">
+              <h4><i class="fas fa-book-open"></i> Story Telling</h4>
+              <p>
+                Narrate inspiring stories from our epics and scriptures with
+                engaging storytelling skills.
+              </p>
+              <button class="rules-btn" onclick="openModal('story-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('story')"
+              >
+                Register
+              </button>
+              <div id="story-registration" class="registration-options">
+                <h5>Registration</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('story', 'solo')"
+                    style="width: 100%"
+                  >
+                    Solo Registration
+                    <div class="price-info">₹200</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theatre Tab -->
+        <div id="theatre" class="tab-content">
+          <div
+            class="category-banner"
+            style="
+              background-image: url('https://hkmraipur.org/wp-content/uploads/2025/07/theatre.jpg');
+            "
+          >
+            <div class="category-banner-content">
+              <h3>Theatre</h3>
+              <p>
+                Bring ancient characters to life with authentic costumes and
+                powerful performances
+              </p>
+            </div>
+          </div>
+          <div class="event-cards">
+            <div class="event-card">
+              <h4><i class="fas fa-mask"></i> Puranic Costumes</h4>
+              <p>
+                Dress up as characters from our ancient scriptures and epics
+                with authentic costumes and presentation.
+              </p>
+              <button class="rules-btn" onclick="openModal('costume-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('costume')"
+              >
+                Register
+              </button>
+              <div id="costume-registration" class="registration-options">
+                <h5>Registration</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('costume', 'solo')"
+                    style="width: 100%"
+                  >
+                    Solo Registration
+                    <div class="price-info">₹200</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drawing Tab -->
+        <div id="drawing" class="tab-content">
+          <div
+            class="category-banner"
+            style="
+              background-image: url('https://hkmraipur.org/wp-content/uploads/2025/07/drawing.jpg');
+            "
+          >
+            <div class="category-banner-content">
+              <h3>Drawing & Painting</h3>
+              <p>
+                Express your creativity through colors, sketches, and artistic
+                masterpieces
+              </p>
+            </div>
+          </div>
+          <div class="event-cards">
+            <div class="event-card">
+              <h4><i class="fas fa-palette"></i> Coloring</h4>
+              <p>
+                Bring life to beautiful designs with vibrant colors and creative
+                combinations.
+              </p>
+              <button class="rules-btn" onclick="openModal('coloring-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('coloring')"
+              >
+                Register
+              </button>
+              <div id="coloring-registration" class="registration-options">
+                <h5>Registration</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('coloring', 'solo')"
+                    style="width: 100%"
+                  >
+                    Solo Registration
+                    <div class="price-info">₹200</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-card">
+              <h4><i class="fas fa-paint-brush"></i> Painting</h4>
+              <p>
+                Create stunning artworks using various painting techniques and
+                mediums.
+              </p>
+              <button class="rules-btn" onclick="openModal('painting-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('painting')"
+              >
+                Register
+              </button>
+              <div id="painting-registration" class="registration-options">
+                <h5>Registration</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('painting', 'solo')"
+                    style="width: 100%"
+                  >
+                    Solo Registration
+                    <div class="price-info">₹200</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-card">
+              <h4><i class="fas fa-pencil-alt"></i> Pencil Shading</h4>
+              <p>
+                Master the art of pencil shading to create realistic and
+                expressive drawings.
+              </p>
+              <button class="rules-btn" onclick="openModal('shading-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('shading')"
+              >
+                Register
+              </button>
+              <div id="shading-registration" class="registration-options">
+                <h5>Registration</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('shading', 'solo')"
+                    style="width: 100%"
+                  >
+                    Solo Registration
+                    <div class="price-info">₹200</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-card">
+              <h4><i class="fas fa-image"></i> Canvas Painting</h4>
+              <p>
+                Express your creativity on canvas with oils, acrylics, or
+                watercolors.
+              </p>
+              <button class="rules-btn" onclick="openModal('canvas-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('canvas')"
+              >
+                Register
+              </button>
+              <div id="canvas-registration" class="registration-options">
+                <h5>Registration</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('canvas', 'solo')"
+                    style="width: 100%"
+                  >
+                    Solo Registration
+                    <div class="price-info">₹200</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decoration Tab -->
+        <div id="decoration" class="tab-content">
+          <div
+            class="category-banner"
+            style="
+              background-image: url('https://hkmraipur.org/wp-content/uploads/2025/07/rangoli.jpg');
+            "
+          >
+            <div class="category-banner-content">
+              <h3>Decoration</h3>
+              <p>
+                Create beautiful traditional art with rangoli and decorative
+                designs
+              </p>
+            </div>
+          </div>
+          <div class="event-cards">
+            <div class="event-card">
+              <h4><i class="fas fa-flower"></i> Rangoli</h4>
+              <p>
+                Create beautiful traditional floor art using colors, flowers,
+                and natural materials.
+              </p>
+              <button class="rules-btn" onclick="openModal('rangoli-rules')">
+                Guidelines
+              </button>
+              <button
+                class="register-btn"
+                onclick="showRegistrationOptions('rangoli')"
+              >
+                Register
+              </button>
+              <div id="rangoli-registration" class="registration-options">
+                <h5>Choose Registration Type</h5>
+                <div class="option-buttons">
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('rangoli', 'solo')"
+                  >
+                    Solo
+                    <div class="price-info">₹200</div>
+                  </div>
+                  <div
+                    class="option-btn"
+                    onclick="registerForEvent('rangoli', 'group')"
+                  >
+                    Group
+                    <div class="price-info">₹300</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guidelines Section -->
+    <section id="guidelines" class="section guidelines-section">
+      <div class="container">
+        <h2 class="section-title">Event Guidelines</h2>
+        <div class="guidelines-grid">
+          <div class="guideline-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Important Dates</h4>
+            <p>Registration Deadline<br /><strong>August 15, 2025</strong></p>
+            <p>Prize Ceremony<br /><strong>August 25, 2025</strong></p>
+          </div>
+          <div class="guideline-card">
+            <i class="fas fa-ruler"></i>
+            <h4>Stage Size</h4>
+            <p>Standard stage dimensions available for all performances</p>
+            <p>Sound system and basic lighting provided</p>
+          </div>
+          <div class="guideline-card">
+            <i class="fas fa-check-circle"></i>
+            <h4>Do's</h4>
+            <p>
+              • Follow time limits strictly<br />• Bring your own props<br />•
+              Dress appropriately<br />• Respect other participants
+            </p>
+          </div>
+          <div class="guideline-card">
+            <i class="fas fa-times-circle"></i>
+            <h4>Don'ts</h4>
+            <p>
+              • No inappropriate content<br />• No late entries<br />• No
+              disruptive behavior<br />• No outside food
+            </p>
+          </div>
+        </div>
+
+        <div class="prasadam-card">
+          <h3><i class="fas fa-heart"></i> Special Announcement</h3>
+          <p><strong>Prasadam will be served to all participants!</strong></p>
+          <p>Enjoy delicious sanctified food prepared with love and devotion</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title" style="color: var(--background-color)">
+          Contact Us
+        </h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h4>Get in Touch</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Hare Krishna Movement<br />Bhilai,
+              Chhattisgarh, India
+            </p>
+            <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
+            <p><i class="fas fa-envelope"></i> info@hkmbhilai.org</p>
+            <p><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</p>
+
+            <h4 style="margin-top: 2rem">Registration Details</h4>
+            <p>
+              <strong>Online Registration:</strong> Fill out our Google Form
+            </p>
+            <p><strong>Offline Registration:</strong> Visit our center</p>
+            <p><strong>Registration Fee:</strong> Free for all participants</p>
+          </div>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.123456789!2d81.123456!3d21.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBhilai!5e0!3m2!1sen!2sin!4v1234567890"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section
+      id="register"
+      class="section"
+      style="
+        background: linear-gradient(
+          135deg,
+          var(--krishna-purple),
+          var(--primary-color)
+        );
+        color: var(--white);
+      "
+    >
+      <div class="container">
+        <h2 class="section-title" style="color: var(--background-color)">
+          Register Now
+        </h2>
+        <div style="text-align: center; max-width: 600px; margin: 0 auto">
+          <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.8">
+            Ready to showcase your talent? Register for Heritage Fest 2025 and
+            be part of this amazing cultural celebration!
+          </p>
+          <a
+            href="https://forms.google.com/heritage-fest-2025"
+            target="_blank"
+            class="cta-button"
+            style="font-size: 1.2rem; padding: 1.2rem 3rem; margin: 1rem"
+          >
+            <i class="fas fa-external-link-alt"></i> Register Online
+          </a>
+          <p style="margin-top: 2rem; opacity: 0.9">
+            For offline registration, visit our center or contact us directly.
+            Registration is completely free!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Heritage Fest 2025</h4>
+            <p>
+              Celebrating our rich cultural heritage through divine arts and
+              spiritual performances. Join us in this magnificent journey of
+              cultural exploration.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul style="list-style: none">
+              <li>
+                <a
+                  href="#about"
+                  style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#events"
+                  style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#guidelines"
+                  style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
+                  >Guidelines</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Heritage Fest - Hare Krishna Movement, Bhilai. All
+            rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal for Rules -->
+    <div id="rulesModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-body">
+          <!-- Modal content will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="scroll-top" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://js.instamojo.com/v1/checkout.js"></script>
+    <script>
+      // Initialize Swiper
+      const swiper = new Swiper(".hero-slider", {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+      });
+
+      // Mobile Menu Toggle
+      const mobileToggle = document.getElementById("mobile-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      mobileToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+
+      // Registration functionality
+      function showRegistrationOptions(eventType) {
+        // Hide all registration options first
+        const allOptions = document.querySelectorAll(".registration-options");
+        allOptions.forEach((option) => {
+          option.classList.remove("active");
+        });
+
+        // Show the specific registration options
+        const registrationDiv = document.getElementById(
+          eventType + "-registration"
+        );
+        if (registrationDiv) {
+          registrationDiv.classList.toggle("active");
+        }
+      }
+
+      function registerForEvent(eventType, registrationType) {
+        // Updated pricing for all events
+        let price;
+        price = registrationType === "solo" ? 200 : 300;
+
+        const eventName = eventType.replace("-", " ");
+
+        // Show participant form before payment
+        showParticipantForm(eventType, registrationType, price, eventName);
+      }
+
+      // Function to show participant details form
+      function showParticipantForm(
+        eventType,
+        registrationType,
+        price,
+        eventName
+      ) {
+        const formHTML = `
+          <div id="participant-form" style="
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: rgba(0,0,0,0.8); z-index: 10000; display: flex; 
+            align-items: center; justify-content: center; padding: 1rem;
+          ">
+            <div style="
+              background: white; padding: 2rem; border-radius: 10px; 
+              max-width: 500px; width: 100%; max-height: 90vh; overflow-y: auto;
+              box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            ">
+              <h3 style="margin-bottom: 1rem; color: #333;">Heritage Fest 2025 Registration</h3>
+              <p style="margin-bottom: 1rem;"><strong>Event:</strong> ${eventName} (${registrationType})</p>
+              <p style="margin-bottom: 1.5rem; color: #FF6B35; font-size: 1.2rem;"><strong>Registration Fee: ₹${price}</strong></p>
+              
+              <form id="registration-form">
+                <div style="margin-bottom: 1rem;">
+                  <label style="display: block; margin-bottom: 0.25rem; font-weight: bold;">Full Name *</label>
+                  <input type="text" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                  <label style="display: block; margin-bottom: 0.25rem; font-weight: bold;">Email *</label>
+                  <input type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                  <label style="display: block; margin-bottom: 0.25rem; font-weight: bold;">Phone Number *</label>
+                  <input type="tel" name="phone" required pattern="[0-9]{10}" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                  <label style="display: block; margin-bottom: 0.25rem; font-weight: bold;">Age *</label>
+                  <input type="number" name="age" required min="3" max="100" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                </div>
+                
+                ${
+                  registrationType === "group"
+                    ? `
+                <div style="margin-bottom: 1rem;">
+                  <label style="display: block; margin-bottom: 0.25rem; font-weight: bold;">Group Members (Name, Age) *</label>
+                  <textarea name="members" rows="3" required placeholder="Example: John Doe (15), Jane Smith (16)" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; resize: vertical;"></textarea>
+                </div>
+                `
+                    : ""
+                }
+                
+                <div style="margin-bottom: 1rem;">
+                  <label style="display: block; margin-bottom: 0.25rem; font-weight: bold;">Address</label>
+                  <textarea name="address" rows="2" placeholder="Your address" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; resize: vertical;"></textarea>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                  <button type="button" onclick="closeParticipantForm()" style="
+                    padding: 0.75rem 1.5rem; background: #ccc; color: #333; border: none; 
+                    border-radius: 5px; cursor: pointer; font-size: 1rem;
+                  ">Cancel</button>
+                  
+                  <button type="submit" style="
+                    padding: 0.75rem 2rem; background: #FF6B35; color: white; 
+                    border: none; border-radius: 5px; cursor: pointer; flex: 1;
+                    font-size: 1rem; font-weight: bold;
+                  ">Pay ₹${price} with Instamojo</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        `;
+
+        document.body.insertAdjacentHTML("beforeend", formHTML);
+
+        // Handle form submission
+        document
+          .getElementById("registration-form")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            // Create payment with Instamojo
+            createInstamojoPayment(
+              eventType,
+              registrationType,
+              price,
+              formData
+            );
+          });
+      }
+
+      function closeParticipantForm() {
+        const form = document.getElementById("participant-form");
+        if (form) form.remove();
+      }
+
+      // Configure Instamojo Seamless Checkout
+      Instamojo.configure({
+        handlers: {
+          onOpen: function () {
+            console.log("Payment modal opened");
+          },
+          onClose: function () {
+            console.log("Payment modal closed");
+          },
+          onSuccess: function (response) {
+            console.log("Payment Success:", response);
+
+            // Store payment success info
+            const registrationData = JSON.parse(
+              localStorage.getItem("heritage_fest_temp_registration") || "{}"
+            );
+            registrationData.payment_id = response.payment_id;
+            registrationData.payment_request_id = response.payment_request_id;
+            registrationData.payment_status = "success";
+            registrationData.timestamp = new Date().toISOString();
+
+            localStorage.setItem(
+              "heritage_fest_registration",
+              JSON.stringify(registrationData)
+            );
+            localStorage.removeItem("heritage_fest_temp_registration");
+
+            // Close the registration form if it's still open
+            closeParticipantForm();
+
+            // Show success message
+            alert(
+              `🎉 Payment Successful!\\n\\nThank you ${registrationData.name} for registering for Heritage Fest 2025!\\n\\nEvent: ${registrationData.eventType} (${registrationData.registrationType})\\nAmount: ₹${registrationData.price}\\n\\nPayment ID: ${response.payment_id}\\n\\nYou'll receive confirmation details on your email: ${registrationData.email}`
+            );
+          },
+          onFailure: function (response) {
+            console.log("Payment Failed:", response);
+
+            // Re-enable the payment button
+            const submitBtn = document.querySelector(
+              '#registration-form button[type="submit"]'
+            );
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = `Pay ₹${
+                JSON.parse(
+                  localStorage.getItem("heritage_fest_temp_registration") ||
+                    "{}"
+                ).price || 0
+              } with Instamojo`;
+            }
+
+            alert(
+              "Payment failed. Please try again or contact us at +91 97550 98618"
+            );
+          },
+        },
+      });
+
+      async function createInstamojoPayment(
+        eventType,
+        registrationType,
+        price,
+        formData
+      ) {
+        const submitBtn = document.querySelector(
+          '#registration-form button[type="submit"]'
+        );
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = "Processing...";
+
+        // Store registration data temporarily
+        const tempRegistrationData = {
+          eventType: eventType.replace("-", " "),
+          registrationType,
+          price,
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          age: formData.get("age"),
+          address: formData.get("address"),
+          members: formData.get("members") || "",
+        };
+
+        localStorage.setItem(
+          "heritage_fest_temp_registration",
+          JSON.stringify(tempRegistrationData)
+        );
+
+        try {
+          // Create payment request on your backend
+          const response = await fetch("/api/create-payment", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              purpose: `Heritage Fest 2025 - ${eventType.replace(
+                "-",
+                " "
+              )} (${registrationType})`,
+              amount: price,
+              buyer_name: formData.get("name"),
+              buyer_email: formData.get("email"),
+              buyer_phone: formData.get("phone"),
+              redirect_url: window.location.origin,
+            }),
+          });
+
+          if (!response.ok) {
+            throw new Error(`Server error: ${response.status}`);
+          }
+
+          const result = await response.json();
+          console.log("Payment response:", result);
+
+          if (result.paymentUrl) {
+            // Use Instamojo Seamless Checkout
+            Instamojo.open(result.paymentUrl);
+          } else {
+            throw new Error("Payment URL not received from server.");
+          }
+        } catch (error) {
+          console.error("Payment creation failed:", error);
+
+          // Fallback: Use direct Instamojo link for this event
+          const directLink = `https://www.instamojo.com/@heritagefest2025/`;
+          alert(
+            `Server temporarily unavailable. Opening direct payment link.\\n\\nEvent: ${tempRegistrationData.eventType} (${registrationType})\\nAmount: ₹${price}\\n\\nPlease complete payment and contact us at +91 97550 98618 with your details.`
+          );
+
+          // Open fallback link
+          Instamojo.open(directLink);
+        } finally {
+          // Re-enable button in case of error
+          if (document.getElementById("participant-form")) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `Pay ₹${price} with Instamojo`;
+          }
+        }
+      }
+
+      // Check for payment success on page load
+      window.addEventListener("load", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get("payment") === "success") {
+          const registrationData = localStorage.getItem(
+            "heritage_fest_registration"
+          );
+          if (registrationData) {
+            const data = JSON.parse(registrationData);
+            alert(
+              `🎉 Payment Successful!\\n\\nThank you ${
+                data.name
+              } for registering for Heritage Fest 2025!\\n\\nEvent: ${data.eventType.replace(
+                "-",
+                " "
+              )} (${data.registrationType})\\nAmount: ₹${
+                data.price
+              }\\n\\nYou'll receive confirmation details on your email: ${
+                data.email
+              }`
+            );
+
+            // Clear the registration data
+            localStorage.removeItem("heritage_fest_registration");
+
+            // Clean up URL
+            window.history.replaceState(
+              {},
+              document.title,
+              window.location.pathname
+            );
+          }
+        }
+      });
+
+      // Tab Functionality
+      function showTab(tabName) {
+        // Hide all tab contents
+        const tabContents = document.querySelectorAll(".tab-content");
+        tabContents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        // Remove active class from all buttons
+        const tabButtons = document.querySelectorAll(".tab-button");
+        tabButtons.forEach((button) => {
+          button.classList.remove("active");
+        });
+
+        // Show selected tab content
+        document.getElementById(tabName).classList.add("active");
+
+        // Add active class to clicked button
+        event.target.classList.add("active");
+      }
+
+      // Modal Functionality
+      const modal = document.getElementById("rulesModal");
+      const modalBody = document.getElementById("modal-body");
+
+      function openModal(ruleType) {
+        const rules = {
+          "bharatnatyam-rules": {
+            title: "Bharatnatyam Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Performance duration: 5-8 minutes</li>
+                            <li>Traditional attire mandatory</li>
+                            <li>Own music arrangement required</li>
+                            <li>Judging criteria: Technique, expression, costume, overall presentation</li>
+                            <li>Age categories: Under 12, 13-18, Above 18</li>
+                        </ul>
+                        <h4>What to Bring:</h4>
+                        <ul>
+                            <li>Music in USB drive (MP3 format)</li>
+                            <li>Traditional costume and jewelry</li>
+                            <li>Backup music arrangement</li>
+                        </ul>
+                    `,
+          },
+          "classical-rules": {
+            title: "Classical Dance (Others) Rules",
+            content: `
+                        <h4>Accepted Dance Forms:</h4>
+                        <ul>
+                            <li>Kathak</li>
+                            <li>Odissi</li>
+                            <li>Kuchipudi</li>
+                            <li>Manipuri</li>
+                            <li>Mohiniyattam</li>
+                            <li>Kathakali</li>
+                        </ul>
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Performance duration: 5-8 minutes</li>
+                            <li>Traditional elements must be prominent</li>
+                            <li>Authentic costume preferred</li>
+                            <li>Age-appropriate content only</li>
+                        </ul>
+                    `,
+          },
+          "semi-classical-rules": {
+            title: "Semi Classical Dance Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Performance duration: 4-6 minutes</li>
+                            <li>Blend of classical and contemporary elements</li>
+                            <li>Devotional or spiritual theme preferred</li>
+                            <li>Creative choreography encouraged</li>
+                            <li>Appropriate costume required</li>
+                        </ul>
+                        <h4>Song Recommendations:</h4>
+                        <ul>
+                            <li>Devotional songs with modern arrangements</li>
+                            <li>Fusion of classical and light music</li>
+                            <li>No purely western music</li>
+                        </ul>
+                    `,
+          },
+          "light-dance-rules": {
+            title: "Light Dance Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Performance duration: 3-5 minutes</li>
+                            <li>Modern/contemporary dance styles allowed</li>
+                            <li>Theme should be positive and uplifting</li>
+                            <li>Group or solo performances welcome</li>
+                            <li>Creative costumes encouraged</li>
+                        </ul>
+                        <h4>Music Guidelines:</h4>
+                        <ul>
+                            <li>Upbeat and energetic music</li>
+                            <li>No inappropriate lyrics</li>
+                            <li>Devotional fusion music preferred</li>
+                        </ul>
+                        <p><strong>Song List:</strong> <a href="https://drive.google.com/light-dance-songs" target="_blank">Download from Google Drive</a></p>
+                    `,
+          },
+          "gita-rules": {
+            title: "Gita Sloka Chanting Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Duration: 3-5 minutes</li>
+                            <li>Minimum 2 slokas required</li>
+                            <li>Correct pronunciation essential</li>
+                            <li>Clear diction and rhythm</li>
+                            <li>Meaning explanation bonus points</li>
+                        </ul>
+                        <h4>Judging Criteria:</h4>
+                        <ul>
+                            <li>Pronunciation accuracy (40%)</li>
+                            <li>Rhythm and melody (30%)</li>
+                            <li>Clarity and confidence (20%)</li>
+                            <li>Overall presentation (10%)</li>
+                        </ul>
+                    `,
+          },
+          "keyboard-rules": {
+            title: "Keyboard Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Performance duration: 4-6 minutes</li>
+                            <li>Classical and light music categories</li>
+                            <li>Original compositions welcome</li>
+                            <li>Use of backing tracks allowed</li>
+                            <li>Own keyboard preferred (basic provided)</li>
+                        </ul>
+                        <h4>Categories:</h4>
+                        <ul>
+                            <li>Classical: Ragas, devotional compositions</li>
+                            <li>Light: Modern arrangements, fusion</li>
+                        </ul>
+                    `,
+          },
+          "percussion-rules": {
+            title: "Percussion Competition Rules",
+            content: `
+                        <h4>Instruments Allowed:</h4>
+                        <ul>
+                            <li>Tabla</li>
+                            <li>Mridangam</li>
+                            <li>Drums (Western)</li>
+                            <li>Dholak</li>
+                            <li>Cajon</li>
+                        </ul>
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Performance duration: 4-6 minutes</li>
+                            <li>Solo or ensemble allowed</li>
+                            <li>Accompaniment track permitted</li>
+                            <li>Own instruments recommended</li>
+                        </ul>
+                    `,
+          },
+          "vocal-rules": {
+            title: "Vocal Music Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Performance duration: 4-6 minutes</li>
+                            <li>Devotional songs preferred</li>
+                            <li>Classical ragas welcome</li>
+                            <li>Accompaniment allowed</li>
+                            <li>Original compositions bonus points</li>
+                        </ul>
+                        <h4>Song Categories:</h4>
+                        <ul>
+                            <li>Bhajans and Kirtans</li>
+                            <li>Classical compositions</li>
+                            <li>Regional devotional songs</li>
+                            <li>Contemporary spiritual music</li>
+                        </ul>
+                    `,
+          },
+          "rhymes-rules": {
+            title: "Rhymes Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Performance duration: 2-4 minutes</li>
+                            <li>Age categories: 3-6, 7-10, 11-14</li>
+                            <li>Devotional or moral theme</li>
+                            <li>Clear pronunciation required</li>
+                            <li>Actions and expressions encouraged</li>
+                        </ul>
+                        <h4>Themes:</h4>
+                        <ul>
+                            <li>Krishna stories</li>
+                            <li>Moral values</li>
+                            <li>Nature and creation</li>
+                            <li>Indian culture</li>
+                        </ul>
+                    `,
+          },
+          "story-rules": {
+            title: "Story Telling Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Performance duration: 5-8 minutes</li>
+                            <li>Stories from epics and scriptures</li>
+                            <li>Engaging storytelling techniques</li>
+                            <li>Voice modulation encouraged</li>
+                            <li>Simple props allowed</li>
+                        </ul>
+                        <h4>Suggested Stories:</h4>
+                        <ul>
+                            <li>Krishna Leelas</li>
+                            <li>Ramayana episodes</li>
+                            <li>Mahabharata stories</li>
+                            <li>Moral tales from Puranas</li>
+                        </ul>
+                    `,
+          },
+          "costume-rules": {
+            title: "Puranic Costumes Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Character presentation: 3-5 minutes</li>
+                            <li>Authentic costume design</li>
+                            <li>Character portrayal and dialogue</li>
+                            <li>Historical accuracy appreciated</li>
+                            <li>Creative interpretation allowed</li>
+                        </ul>
+                        <h4>Character Categories:</h4>
+                        <ul>
+                            <li>Krishna avatars</li>
+                            <li>Ramayana characters</li>
+                            <li>Mahabharata heroes</li>
+                            <li>Goddess forms</li>
+                            <li>Sage and saint characters</li>
+                        </ul>
+                    `,
+          },
+          "coloring-rules": {
+            title: "Coloring Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Time limit: 45 minutes</li>
+                            <li>Pre-drawn outlines provided</li>
+                            <li>Coloring materials: Crayons, colored pencils</li>
+                            <li>Age categories: 3-6, 7-10, 11-14</li>
+                            <li>No digital coloring</li>
+                        </ul>
+                        <h4>Themes:</h4>
+                        <ul>
+                            <li>Krishna and friends</li>
+                            <li>Temple architecture</li>
+                            <li>Indian festivals</li>
+                            <li>Nature and animals</li>
+                        </ul>
+                    `,
+          },
+          "painting-rules": {
+            title: "Painting Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Time limit: 2 hours</li>
+                            <li>Canvas/paper provided (A3 size)</li>
+                            <li>Bring your own painting materials</li>
+                            <li>Water colors, acrylics allowed</li>
+                            <li>Theme announced on spot</li>
+                        </ul>
+                        <h4>Categories:</h4>
+                        <ul>
+                            <li>Children (8-14 years)</li>
+                            <li>Youth (15-25 years)</li>
+                            <li>Adults (25+ years)</li>
+                        </ul>
+                    `,
+          },
+          "shading-rules": {
+            title: "Pencil Shading Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Time limit: 1.5 hours</li>
+                            <li>Pencils of different grades allowed</li>
+                            <li>A4 size paper provided</li>
+                            <li>Reference image will be provided</li>
+                            <li>Realistic shading techniques preferred</li>
+                        </ul>
+                        <h4>What to Bring:</h4>
+                        <ul>
+                            <li>Set of drawing pencils (2H to 8B)</li>
+                            <li>Erasers and blending tools</li>
+                            <li>Ruler for guidelines</li>
+                        </ul>
+                    `,
+          },
+          "canvas-rules": {
+            title: "Canvas Painting Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Time limit: 3 hours</li>
+                            <li>Canvas size: 12" x 16"</li>
+                            <li>Oil, acrylic, or watercolor allowed</li>
+                            <li>Bring your own materials</li>
+                            <li>Theme: "Divine Heritage"</li>
+                        </ul>
+                        <h4>Judging Criteria:</h4>
+                        <ul>
+                            <li>Creativity and originality (30%)</li>
+                            <li>Technique and skill (25%)</li>
+                            <li>Theme interpretation (25%)</li>
+                            <li>Overall impact (20%)</li>
+                        </ul>
+                    `,
+          },
+          "rangoli-rules": {
+            title: "Rangoli Competition Rules",
+            content: `
+                        <h4>Competition Guidelines:</h4>
+                        <ul>
+                            <li>Time limit: 2 hours</li>
+                            <li>Space provided: 4ft x 4ft</li>
+                            <li>Traditional materials encouraged</li>
+                            <li>Flowers, colors, rice allowed</li>
+                            <li>Team of 2-4 members allowed</li>
+                        </ul>
+                        <h4>Materials Provided:</h4>
+                        <ul>
+                            <li>Basic colored powders</li>
+                            <li>White rangoli powder</li>
+                            <li>Fresh flower petals</li>
+                        </ul>
+                        <h4>Theme:</h4>
+                        <p>Festival celebration or spiritual motifs</p>
+                    `,
+          },
+        };
+
+        const rule = rules[ruleType];
+        if (rule) {
+          modalBody.innerHTML = `
+                    <h3>${rule.title}</h3>
+                    ${rule.content}
+                    <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee;">
+                        <p><strong>For more information, contact us at +91 97550 98618 & +91 90392 15222</strong></p>
+                    </div>
+                `;
+          modal.style.display = "block";
+        }
+      }
+
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      // Close modal when clicking outside
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Back to top button functionality
+      const scrollTopBtn = document.getElementById("scroll-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.style.display = "flex";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Header scroll effect
+      window.addEventListener("scroll", () => {
+        const header = document.getElementById("site-header");
+        if (window.scrollY > 50) {
+          header.style.background = "rgba(255, 248, 236, 0.98)";
+          header.style.boxShadow = "0 2px 20px rgba(0,0,0,0.1)";
+        } else {
+          header.style.background = "rgba(255, 248, 236, 0.95)";
+          header.style.boxShadow = "none";
+        }
+      });
+
+      // Animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document
+        .querySelectorAll(
+          ".event-card, .guideline-card, .about-text, .about-image"
+        )
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          observer.observe(el);
+        });
+    </script>
+  </body>
+</html>
